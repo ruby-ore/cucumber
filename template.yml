@@ -1,2 +1,5 @@
+enable:
+  - cucumber
+
 variables:
   cucumber_dependency: ~> 0.10.2
