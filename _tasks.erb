@@ -1,5 +1,20 @@
+<%- if bundler? -%>
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new do |t|
   t.cucumber_opts = %w{--format pretty}
 end
+<%- else -%>
+begin
+  gem 'cucumber', '<%= @cucumber_dependency %>'
+  require 'cucumber/rake/task'
+
+  Cucumber::Rake::Task.new do |t|
+    t.cucumber_opts = %w{--format pretty}
+  end
+rescue LoadError => e
+  task :cucumber do
+    abort "Please run `gem install cucumber` to install Cucumber."
+  end
+end
+<%- end -%>
