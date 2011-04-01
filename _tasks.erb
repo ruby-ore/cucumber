@@ -2,7 +2,7 @@
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new do |t|
-  t.cucumber_opts = %w{--format pretty}
+  t.cucumber_opts = %w[--format pretty]
 end
 <%- else -%>
 begin
@@ -10,7 +10,7 @@ begin
   require 'cucumber/rake/task'
 
   Cucumber::Rake::Task.new do |t|
-    t.cucumber_opts = %w{--format pretty}
+    t.cucumber_opts = %w[--format pretty]
   end
 rescue LoadError => e
   task :cucumber do
