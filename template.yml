@@ -1,2 +1,2 @@
-variables:
-  cucumber_dependency: ~> 0.10.2
+development_dependencies:
+  cucumber: ~> 0.10.2
