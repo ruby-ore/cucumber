@@ -6,7 +6,6 @@ Cucumber::Rake::Task.new do |t|
 end
 <%- else -%>
 begin
-  gem 'cucumber', '<%= @cucumber_dependency %>'
   require 'cucumber/rake/task'
 
   Cucumber::Rake::Task.new do |t|
